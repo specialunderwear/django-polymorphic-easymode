@@ -24,8 +24,8 @@ class OwnerAdmin(admin.ModelAdmin):
 class OrderAdmin(admin.ModelAdmin):
     ordering = ('order',)
     list_display = ('__unicode__', 'id', 'order')
-    
     list_editable = ('order',)
+    readonly_fields = ('real_link',)
     
     class Media:
         js = (
