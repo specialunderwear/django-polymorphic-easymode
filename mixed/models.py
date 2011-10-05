@@ -32,6 +32,9 @@ class PageWithBodyText(PageBase, RealPageBase):
     "A page with an extra text"
     body = models.TextField()
 
+@I18n('image')
 class PageWithLink(PageBase, RealPageBase):
     "A page with an extra link"
     link = models.URLField()
+    image = models.ImageField(upload_to='images')
+

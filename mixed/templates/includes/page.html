@@ -5,4 +5,7 @@
     <small>{{ page.meta_description }}</small>
     <em>{{ page.slug }}</em>
     <p>{{ page.link }}</p>
+    {% if page.image %}
+    <img src="/media/{{ page.image }}"/>
+    {% endif %}
 </li>
