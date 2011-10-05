@@ -7,6 +7,11 @@ class Owner(models.Model):
     title = models.CharField(max_length=255)
 
 class RealPageBase(models.Model):
+    """
+    Easymode can not internationalize fields in concrete base classes.
+    Therefor we just put the common fields in an abstract base class
+    and use multiple inheritance to get what we want.
+    """
     title = models.CharField(max_length=255)
     meta_description = models.TextField()
     
